@@ -1,0 +1,14 @@
+when adding a new page.
+1.Copy the last widget tree and paste it under widget tree folder(DONT FORGET TO CHANGE THE Stateless widget's name to p
+revent duplicates during reference)
+2.from your new copied widget tree,make sure phone_views,icons and buttons array have the same length
+3.create 2 attributes under home state(statemanager/home/home_state.dart)
+eg: attridute=> var disc_phone_index=0.obs;
+
+method  to change attribute's value void changeDiscountPageIndex(index){
+    disc_phone_index.value=index;
+  }
+4.Utilization=>go back to ur newly copied widget tree and update those fields(at line 57 and line 66),dont forget to update the page index too(0 is first drawer
+item-to ur current one)
+5:go into the appbar folder and update line 61->just add ur new index and its value from home state
+6:Lastly,register your named router in main.dart and dash_board_actions.dart
